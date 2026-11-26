@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dn6au4fqlj538"]
+
+[ext_resource type="Script" path="res://game/characters/snack_o_tron/character_snack_o_tron.gd" id="1_550iw"]
+
+[node name="CharacterSnackOTron" type="Area2D" unique_id=457938088]
+input_pickable = false
+script = ExtResource("1_550iw")
+text_color = Color(0.49803922, 0.9098039, 1, 1)
+dialog_pos = Vector2(0, -8)
+script_name = "SnackOTron"
+description = "Snack-O-Tron 3000"
+clickable = false
+cursor = 8
+interaction_polygon = PackedVector2Array()
+
+[node name="ScalingPolygon" type="CollisionPolygon2D" parent="." unique_id=1817219781]
+polygon = PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1673783058]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=332507830]
+texture_filter = 1
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=463573995]
+visible = false
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="ObstaclePolygon" type="NavigationObstacle2D" parent="." unique_id=1646904526]
+visible = false
+affect_navigation_mesh = true
+carve_navigation_mesh = true

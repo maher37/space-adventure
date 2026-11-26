@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://co3kn2ewgc8hm"]
+
+[ext_resource type="Script" uid="uid://bwdtuia2olemx" path="res://game/rooms/galley/room_galley.gd" id="1_jdp8t"]
+[ext_resource type="PackedScene" uid="uid://vymr0fs30gr" path="res://game/rooms/galley/props/background/prop_background.tscn" id="2_3dun2"]
+[ext_resource type="PackedScene" uid="uid://cy2tmunbqynyq" path="res://game/rooms/galley/walkable_areas/floor/walkable_area_floor.tscn" id="2_4nsv6"]
+[ext_resource type="PackedScene" uid="uid://lfv0ar5ijou6" path="res://game/rooms/galley/props/vending_machine/prop_vending_machine.tscn" id="3_pga2k"]
+[ext_resource type="Texture2D" uid="uid://l4n58q3udytn" path="res://game/art/rooms/galley/background.png" id="4_8gqw1"]
+[ext_resource type="PackedScene" uid="uid://bof4daprrywq5" path="res://game/rooms/galley/props/space_nickel/prop_space_nickel.tscn" id="4_f3yj5"]
+[ext_resource type="PackedScene" uid="uid://dyxka6s3il0hw" path="res://game/rooms/galley/hotspots/airlock_button/hotspot_airlock_button.tscn" id="5_pmptu"]
+[ext_resource type="Texture2D" uid="uid://6g3a72n10bus" path="res://game/art/rooms/galley/vending_machine.png" id="6_8tm50"]
+[ext_resource type="PackedScene" uid="uid://cuhx27t5cw1w3" path="res://game/rooms/galley/hotspots/bridge_door/hotspot_bridge_door.tscn" id="6_um44x"]
+[ext_resource type="PackedScene" uid="uid://du5t6qc05nv4h" path="res://game/rooms/galley/hotspots/couch/hotspot_couch.tscn" id="7_vslml"]
+[ext_resource type="Texture2D" uid="uid://w3chjnkulmfg" path="res://game/art/rooms/galley/space_nickel.png" id="8_a3xi6"]
+[ext_resource type="PackedScene" uid="uid://3d15y3g4gbyb" path="res://game/rooms/galley/hotspots/window/hotspot_window.tscn" id="8_wxpfi"]
+[ext_resource type="PackedScene" uid="uid://dqlbhdj48ildf" path="res://game/rooms/galley/markers/start/marker_start.tscn" id="10_dj08g"]
+[ext_resource type="PackedScene" uid="uid://ngxgrup2rlk0" path="res://game/rooms/galley/hotspots/airlock_door/hotspot_airlock_door.tscn" id="10_y7xwx"]
+
+[node name="RoomGalley" type="Node2D" unique_id=1114233203]
+script = ExtResource("1_jdp8t")
+script_name = "Galley"
+width = 320
+height = 200
+
+[node name="WalkableAreas" type="Node2D" parent="." unique_id=1635351774]
+
+[node name="Floor" parent="WalkableAreas" unique_id=105594029 instance=ExtResource("2_4nsv6")]
+position = Vector2(0, 0)
+interaction_polygon = Array[PackedVector2Array]([PackedVector2Array(6, 110, 314, 110, 318, 146, 2, 146)])
+
+[node name="Props" type="Node2D" parent="." unique_id=1922507018]
+
+[node name="Background" parent="Props" unique_id=407765774 instance=ExtResource("2_3dun2")]
+position = Vector2(160, 100)
+texture = ExtResource("4_8gqw1")
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+description = ""
+baseline = -1000
+interaction_polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)
+
+[node name="VendingMachine" parent="Props" unique_id=27921481 instance=ExtResource("3_pga2k")]
+position = Vector2(113, 70)
+texture = ExtResource("6_8tm50")
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+description = "Vending machine"
+baseline = 32
+walk_to_point = Vector2(4, 42)
+interaction_polygon = PackedVector2Array(-17, -32, 17, -32, 17, 32, -17, 32)
+
+[node name="SpaceNickel" parent="Props" unique_id=966739543 instance=ExtResource("4_f3yj5")]
+visible = false
+position = Vector2(196, 110)
+texture = ExtResource("8_a3xi6")
+obstacle_polygon = [Vector2(-16, -16), Vector2(16, -16), Vector2(16, 16), Vector2(-16, 16)]
+description = "Space nickel"
+walk_to_point = Vector2(-12, 2)
+interaction_polygon = PackedVector2Array(-6, -6, 6, -6, 6, 6, -6, 6)
+
+[node name="Hotspots" type="Node2D" parent="." unique_id=109553659]
+
+[node name="AirlockButton" parent="Hotspots" unique_id=2124764806 instance=ExtResource("5_pmptu")]
+position = Vector2(237, 66)
+description = "Big red button"
+walk_to_point = Vector2(0, 46)
+interaction_polygon = PackedVector2Array(-14, -21, 14, -21, 14, 21, -14, 21)
+
+[node name="BridgeDoor" parent="Hotspots" unique_id=1536967341 instance=ExtResource("6_um44x")]
+position = Vector2(63, 62)
+description = "Bridge door"
+walk_to_point = Vector2(0, 50)
+interaction_polygon = PackedVector2Array(-33, -40, 33, -40, 33, 40, -33, 40)
+
+[node name="Couch" parent="Hotspots" unique_id=654509971 instance=ExtResource("7_vslml")]
+position = Vector2(175, 86)
+description = "Couch"
+walk_to_point = Vector2(0, 26)
+interaction_polygon = PackedVector2Array(-44, -16, 44, -16, 44, 16, -44, 16)
+
+[node name="Window" parent="Hotspots" unique_id=1247133832 instance=ExtResource("8_wxpfi")]
+position = Vector2(160, 40)
+description = "Porthole"
+walk_to_point = Vector2(0, 72)
+interaction_polygon = PackedVector2Array(26, 0, 22.5, 13, 13, 22.5, 0, 26, -13, 22.5, -22.5, 13, -26, 0, -22.5, -13, -13, -22.5, -0, -26, 13, -22.5, 22.5, -13)
+
+[node name="AirlockDoor" parent="Hotspots" unique_id=380991214 instance=ExtResource("10_y7xwx")]
+position = Vector2(281, 60)
+description = "Airlock"
+walk_to_point = Vector2(-20, 52)
+interaction_polygon = PackedVector2Array(-31, -42, 31, -42, 31, 42, -31, 42)
+
+[node name="Regions" type="Node2D" parent="." unique_id=1279730253]
+
+[node name="Markers" type="Node2D" parent="." unique_id=1550048041]
+
+[node name="Start" parent="Markers" unique_id=470765015 instance=ExtResource("10_dj08g")]
+position = Vector2(120, 128)
+
+[node name="Characters" type="Node2D" parent="." unique_id=655258325]

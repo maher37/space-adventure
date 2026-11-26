@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dyxka6s3il0hw"]
+
+[ext_resource type="Script" path="res://game/rooms/galley/hotspots/airlock_button/hotspot_airlock_button.gd" id="1_oc4bo"]
+
+[node name="AirlockButton" type="Area2D" unique_id=2124764806]
+script = ExtResource("1_oc4bo")
+script_name = "AirlockButton"
+description = "Airlock Button"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=2038744938]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

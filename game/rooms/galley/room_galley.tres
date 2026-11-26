@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://dam2k58lnsxgk"]
+
+[ext_resource type="Script" path="res://game/rooms/galley/room_galley_state.gd" id="1_dwle8"]
+
+[resource]
+resource_name = "Galley"
+script = ExtResource("1_dwle8")
+script_name = "Galley"
+scene = "res://game/rooms/galley/room_galley.tscn"

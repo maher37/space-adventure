@@ -1,0 +1,30 @@
+[gd_resource type="Resource" format=3 uid="uid://cwvyjna6d5d4a"]
+
+[ext_resource type="Script" uid="uid://brxefo54wpm32" path="res://addons/popochiu/engine/objects/dialog/popochiu_dialog_option.gd" id="1_cg34q"]
+[ext_resource type="Script" path="res://game/dialogs/vending_chat/dialog_vending_chat.gd" id="2_ywbs3"]
+
+[sub_resource type="Resource" id="Opt_who"]
+script = ExtResource("1_cg34q")
+id = "Who"
+text = "Who are you?"
+
+[sub_resource type="Resource" id="Opt_keycard"]
+script = ExtResource("1_cg34q")
+id = "Keycard"
+text = "Why is there a keycard in slot B4?"
+
+[sub_resource type="Resource" id="Opt_free"]
+script = ExtResource("1_cg34q")
+id = "Free"
+text = "Can I have a free snack?"
+
+[sub_resource type="Resource" id="Opt_bye"]
+script = ExtResource("1_cg34q")
+id = "Bye"
+text = "Bye."
+
+[resource]
+resource_name = "VendingChat"
+script = ExtResource("2_ywbs3")
+script_name = "VendingChat"
+options = Array[ExtResource("1_cg34q")]([SubResource("Opt_who"), SubResource("Opt_keycard"), SubResource("Opt_free"), SubResource("Opt_bye")])

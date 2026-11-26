@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://du5t6qc05nv4h"]
+
+[ext_resource type="Script" path="res://game/rooms/galley/hotspots/couch/hotspot_couch.gd" id="1_fe2ek"]
+
+[node name="Couch" type="Area2D" unique_id=654509971]
+script = ExtResource("1_fe2ek")
+script_name = "Couch"
+description = "Couch"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=385227995]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

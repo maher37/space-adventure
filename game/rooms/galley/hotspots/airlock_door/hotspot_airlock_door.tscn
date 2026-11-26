@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ngxgrup2rlk0"]
+
+[ext_resource type="Script" path="res://game/rooms/galley/hotspots/airlock_door/hotspot_airlock_door.gd" id="1_m8lio"]
+
+[node name="AirlockDoor" type="Area2D" unique_id=380991214]
+script = ExtResource("1_m8lio")
+script_name = "AirlockDoor"
+description = "Airlock Door"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=655482008]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

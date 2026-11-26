@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cuhx27t5cw1w3"]
+
+[ext_resource type="Script" path="res://game/rooms/galley/hotspots/bridge_door/hotspot_bridge_door.gd" id="1_huxoq"]
+
+[node name="BridgeDoor" type="Area2D" unique_id=1536967341]
+script = ExtResource("1_huxoq")
+script_name = "BridgeDoor"
+description = "Bridge Door"
+cursor = 1
+interaction_polygon = PackedVector2Array()
+
+[node name="InteractionPolygon" type="CollisionPolygon2D" parent="." unique_id=181083305]
+visible = false
+modulate = Color(1, 0, 1, 1)
+polygon = PackedVector2Array(-12, -12, 12, -12, 12, 12, -12, 12)

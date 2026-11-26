@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dy8lvof5d0yog"]
+
+[ext_resource type="Texture2D" uid="uid://du5vgiymxugea" path="res://game/art/inventory/keycard.png" id="1_8dkp0"]
+[ext_resource type="Script" uid="uid://dmnted7by6x3y" path="res://game/inventory_items/keycard/inventory_item_keycard.gd" id="1_ljjvs"]
+
+[node name="ItemKeycard" type="TextureRect" unique_id=2019241409]
+texture_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_8dkp0")
+stretch_mode = 5
+script = ExtResource("1_ljjvs")
+script_name = "Keycard"
+description = "Keycard"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=405817104]

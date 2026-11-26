@@ -1,0 +1,9 @@
+[gd_resource type="Resource" format=3 uid="uid://chj03ihfalkq2"]
+
+[ext_resource type="Script" path="res://game/inventory_items/space_nickel/inventory_item_space_nickel_state.gd" id="1_f8bi2"]
+
+[resource]
+resource_name = "SpaceNickel"
+script = ExtResource("1_f8bi2")
+script_name = "SpaceNickel"
+scene = "res://game/inventory_items/space_nickel/inventory_item_space_nickel.tscn"
